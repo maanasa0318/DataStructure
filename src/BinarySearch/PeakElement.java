@@ -4,7 +4,8 @@ public class PeakElement {
     // same as Bitonic Array
 	public static void main(String[] args) {
 
-		int[] arr = { 50, 10, 20, 15 };
+		//int[] arr = { 50, 10, 20, 15 };
+		int[] arr = {1,2,3,1};
 		int res = findPeek(arr);
 		System.out.println("Peek elem is " + res);
 	}

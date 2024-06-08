@@ -9,16 +9,11 @@ Given an array and a positive integer k, find the first negative integer for eac
 Example:
 
 Input:
-2
-5
--8 2 3 -6 10
-2
-8
+
 12 -1 -7 8 -15 30 16 28
-3
+k = 3
 
 Output:
--8 0 -6 -6
 -1 -1 -7 -15 -15 0 . */
 public class FirstNegativeNumber {
 

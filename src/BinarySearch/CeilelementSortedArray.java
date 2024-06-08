@@ -1,10 +1,11 @@
 package BinarySearch;
 
+//smallest element greater then search
 public class CeilelementSortedArray {
 
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,8,10,18,20,30};
-		int floorSearch = 9;
+		int floorSearch = 29;
 		
 		int res = findceilElement(arr, floorSearch);
 		System.out.println("ceil element is " + res);
