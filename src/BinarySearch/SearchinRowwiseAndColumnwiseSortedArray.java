@@ -20,7 +20,7 @@ public class SearchinRowwiseAndColumnwiseSortedArray {
 		int j = dimension-1;
 		
 		while( i >=0 && i < dimension
-				&& j >0 && j < dimension) {
+				&& j >=0 && j < dimension) {
 			
 			if(arr[i][j] == search) {
 				System.out.println("Elme is at index is at "+i+ " and " +j);
