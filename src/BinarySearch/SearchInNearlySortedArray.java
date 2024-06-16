@@ -16,7 +16,7 @@ Example :
 Input: arr[] =  {10, 3, 40, 20, 50, 80, 70}, key = 40
 Output: 2 
 Output is index of 40 in given array*/
-public class SearchInNearlyuSortedArray {
+public class SearchInNearlySortedArray {
 
 	public static void main(String[] args) {
 		
@@ -43,12 +43,13 @@ public class SearchInNearlyuSortedArray {
 			if(arr[mid] == search) {
 				return mid;
 			}
-			if(mid+1 >= start && arr[mid+1] == search ) {
-				return mid+1;
+			//mid  - 1 >= start means if mid is at 0 index so check index out of bound error 
+			if(mid -1 >= start && arr[mid-1] == search ) {
+				return mid-1;
 
 			}
-			if(mid+1 <= end && arr[mid -1] == search) {
-				return mid-11;
+			if(mid+1 <= end && arr[mid +1] == search) {
+				return mid+1;
 			}
 			else if(arr[mid] <= search) {
 				end = mid -2;

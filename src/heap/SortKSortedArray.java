@@ -24,6 +24,7 @@ public class SortKSortedArray {
 
 	private static List<Integer> minHeap(int[] arr, int k) {
 		ArrayList<Integer> l = new ArrayList<>();
+		//min heap
 		PriorityQueue<Integer> q = new PriorityQueue<>();
 		for (int i = 0; i < arr.length; i++) {
 			q.add(arr[i]);

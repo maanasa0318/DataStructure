@@ -1,5 +1,6 @@
 package BinarySearch;
 
+//smallest element less then search
 public class FindFloorElementSortedArray {
 
 	public static void main(String[] args) {

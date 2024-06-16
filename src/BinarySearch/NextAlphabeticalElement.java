@@ -1,16 +1,17 @@
 package BinarySearch;
 
+//smallest element greater then search- same as celi elemt search
 public class NextAlphabeticalElement {
 
 	public static void main(String[] args) {
 
 		char[] arr = {'a','c','f','h'};
 		char search = 'f';
-		char res = serachNxetChar(arr, search);
+		char res = serachNxtChar(arr, search);
 		System.out.println("Next char after " + search + " is " + res);
 	}
 
-	private static char serachNxetChar(char[] arr, char search) {
+	private static char serachNxtChar(char[] arr, char search) {
 		int start =0;
 		int end = arr.length-1;
 		char res = '#';

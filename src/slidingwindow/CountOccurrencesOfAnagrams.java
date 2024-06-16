@@ -1,8 +1,6 @@
 package slidingwindow;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /*Given a word pat and a text txt. Return the count of the occurences of anagrams of the word in the text.
 

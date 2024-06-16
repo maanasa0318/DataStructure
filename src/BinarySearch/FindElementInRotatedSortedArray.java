@@ -3,8 +3,8 @@ package BinarySearch;
 public class FindElementInRotatedSortedArray {
 
 	public static void main(String[] args) {
-		//int[] arr = { 11, 12, 15, 18, 2, 5, 6, 8 };
-		int[] arr = {15,2,5,6,8,11,12};
+		int[] arr = { 11, 12, 15, 18, 2, 5, 6, 8 };
+		//int[] arr = {15,2,5,6,8,11,12};
 		int search = 15;
 		
 		// find number of times array is rotate this gives min element in array

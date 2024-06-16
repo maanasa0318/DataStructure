@@ -13,18 +13,19 @@ public class ReturnKlargestElements {
 
 		int[] arr = { 7, 10, 4, 3, 20, 15 };
 		int k = 3;
-		minHeap(arr, k);
+		int res = minHeap(arr, k);
+		System.out.println("Largest elemt at index 3 is "+res);
 	}
 
-	private static void minHeap(int[] arr, int k) {
-		PriorityQueue<Integer> maxheap = new PriorityQueue<>();
+	private static Integer minHeap(int[] arr, int k) {
+		//min heap
+		PriorityQueue<Integer> minheap = new PriorityQueue<>();
 		for (int i = 0; i <= arr.length - 1; i++) {
-			maxheap.add(arr[i]);
-			if (maxheap.size() > k) {
-				maxheap.poll();
+			minheap.add(arr[i]);
+			if (minheap.size() > k) {
+				minheap.poll();
 			}
 		}
-		maxheap.stream()
-				.forEach(System.out :: println);
+		return minheap.peek();
 	}
 }
