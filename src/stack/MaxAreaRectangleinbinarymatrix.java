@@ -5,21 +5,37 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
-/*Find the largest rectangular area possible in a given histogram where the 
- * largest rectangle can be made of a number of contiguous bars. 
- * For simplicity, assume that all bars have same width and the width is 1 unit.
- * Maximum area is 12
-*/
-public class MaximumAreaHistogram {
+/*Given a binary matrix, find the maximum size rectangle binary-sub-matrix with all 1’s.
+Example:
+
+Input :   0 1 1 0
+          1 1 1 1
+          1 1 1 1
+          1 1 0 0
+
+Output :  1 1 1 1
+          1 1 1 1 . i.e 8
+          
+TODO - coding is not yet done
+----------------------------------*/
+public class MaxAreaRectangleinbinarymatrix {
 
 	public static void main(String[] args) {
-
-		int[] arr = {6, 2, 5, 4, 5, 1, 6};
-		int max = getResult(arr);
+		int[][] arr = {{0,1,1,0},
+					   {1,1,1,1},
+					   {1,1,1,1},
+					   {1,1,0,0}};
+		int m = 4;
+		int n = 4;
+		int[] subArr = new int[n];
+		for(int j =0; j <m ; j++) {
+			subArr[j]= arr[0][j];
+		}
+		int max= getResult(subArr);
 		System.out.println("maximun ares is "+ max);
 
 	}
-
+	
 	private static int getResult(int[] arr) {
 		List<Integer> leftIndex = findNearestSmallestToLeft(arr);
 		System.out.println("Left index is "+leftIndex);
@@ -92,7 +108,7 @@ public class MaximumAreaHistogram {
 				if(st.size() ==0) {
 					ls.add(-1);
 				}
-				else if ( st.peek().value < arr[i]) {
+				else if ( st.peek().value <= arr[i]) {
 					ls.add(st.peek().index);
 				}
 			}
@@ -101,8 +117,5 @@ public class MaximumAreaHistogram {
 		
 		return ls;
 	}
+
 }
-
-
-
-

@@ -10,6 +10,7 @@ public class FP01Functional {
 		//printEvenNumbersStructured(List.of(12,9,13,34,5,12,15));
 		printEachCoures(List.of("Spring", "Spring boot", "API", "AWS", "PCF", "Azure"));
 		printSquareOfEvenNumbers(List.of(12,9,13,34,5,12,15));
+	
 
 	}
 	
