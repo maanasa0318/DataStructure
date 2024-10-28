@@ -9,19 +9,28 @@ public class CountGoodSubstrings {
 
 	public static void main(String[] args) {
 
-		String s = "aababcabc";
+		String s = "xyzzaz";
 		// o/p "xyz", "yzz", "zza", and "zaz".
 		int goodsubstring = countGoodSubstrings(s);
 		System.out.println("Count of good substring is:"+goodsubstring);
-
+		
+		//another way
+		int count =0;
+		char[] ch = s.toCharArray();
+		for(int i =0; i< s.length()-3; i++) {
+			if(ch[i] != ch[i+1] &&
+			   ch[i] != ch [i+2] &&
+			   ch[i+1] != ch [i+2]) {
+				count = count + 1;
+			}
+		}
+		System.out.println("count is:" + count);
 	}
 
 	private static int countGoodSubstrings(String s) {
-		char[] ch = s.toCharArray();
 		int i =0;
 		int j =0;
 		int goodsubstring = 0;
-		List<Character> list = new ArrayList<Character>();
 		List<String> answer = new ArrayList<String>();
 		StringBuilder sb = new StringBuilder();
 		

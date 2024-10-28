@@ -19,9 +19,9 @@ Explanation:
 public class LongestSubstringWithKUniqueCharacters {
 
 	public static void main(String[] args) {
-		String s = "aabacbebebe";
+		String s = "aabb";
 		int totalChars = 3;
-		int res = findLargestSubArrayOfUniqueChars(s, totalChars);
+		int res = longestkSubstr(s, totalChars);
 		System.out.println("Longest sub array is " + res);
 	}
 	
