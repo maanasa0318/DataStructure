@@ -20,12 +20,12 @@ public class Maximumofallsubarrays {
 
 		int[] arr = {1, 3, -1, -3, 5, 3, 6, 7};
 		int k = 3;
-		List maxSum = findMaxofAllSubArry(arr, k);
-		System.out.println("max sub array is "+maxSum);
+		int[] maxSum = findMaxofAllSubArry(arr, k);
+		System.out.println("max sub array is "+maxSum.toString());
 
 	}
 
-	private static List findMaxofAllSubArry(int[] arr, int window) {
+	private static int[] findMaxofAllSubArry(int[] arr, int window) {
 		int i = 0;
 		int j = 0;
 		int size = arr.length-1;
@@ -50,7 +50,6 @@ public class Maximumofallsubarrays {
 				j++;
 			}
 		}
-		
-		return answer;
+	    return answer.stream().mapToInt(Integer :: intValue).toArray();
 	}
 }
