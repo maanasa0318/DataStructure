@@ -23,19 +23,22 @@ public class SortKSortedArray {
 	}
 
 	private static List<Integer> minHeap(int[] arr, int k) {
-		ArrayList<Integer> l = new ArrayList<>();
-		//min heap
-		PriorityQueue<Integer> q = new PriorityQueue<>();
-		for (int i = 0; i < arr.length; i++) {
-			q.add(arr[i]);
-			if (q.size() > k) {
-				l.add(q.poll());
+		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+		List<Integer> res = new ArrayList<>();
+		
+		for(int i=0; i<arr.length; i++) {
+			queue.add(arr[i]);
+			if(queue.size() > k) {
+				// now its time to pop and add in res because we don't need to sort all elements of arr. only needed till k
+				res.add(queue.poll());
 			}
 		}
-		while (!q.isEmpty()) {
-			//or l.add(q.remove());
-			l.add(q.poll());
+		while(!queue.isEmpty()) {
+			res.add(queue.poll());
 		}
-		return l;
+		System.out.println(res);
+		return res;
 	}
+
+	
 }

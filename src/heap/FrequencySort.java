@@ -1,14 +1,11 @@
 package heap;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Map.Entry;
 
 /*
  * Print the elements of an array in the increasing frequency if 2 numbers have same frequency then print the one which came first.

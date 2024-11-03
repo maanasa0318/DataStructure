@@ -19,15 +19,17 @@ public class KthSmallestElement {
 	}
 
 	private static int maxHeap(int[] arr, int k) {
-		//Max Heap: Using comparator to make it a max heap.
-		PriorityQueue<Integer> maxheap = new PriorityQueue<>((a, b) -> b - a);
-		for (int i = 0; i <= arr.length - 1; i++) {
-			maxheap.add(arr[i]);
-			if (maxheap.size() > k) {
-				maxheap.poll();
+		PriorityQueue<Integer> queue = new PriorityQueue<Integer>((a, b) -> b-a);
+
+		for(int i =0; i< arr.length; i++) {
+			queue.add(arr[i]);
+			System.out.println(arr[i]);
+			if(queue.size() > k) {
+				queue.poll();
 			}
 		}
-		return maxheap.peek();
+		
+		return queue.peek();
 	}
 
 }
