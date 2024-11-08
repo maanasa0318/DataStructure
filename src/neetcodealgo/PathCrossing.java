@@ -9,6 +9,7 @@ public class PathCrossing {
 		String path = "NESWW";
 		boolean res = isPathCrossing(path);
 		System.out.println(res);
+
 	}
      //     x,y   
 	// N - (0, 1)

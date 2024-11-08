@@ -11,20 +11,24 @@ public class insertionSort {
 		int[] res = insertionSort(arr);
 		System.out.println(Arrays.toString(res));
 	}
+	
 
+	// time complexity - o(n^2) space is : o(1)
+	 
 	private static int[] insertionSort(int[] arr) {
  
-		for(int i=1; i<arr.length; i++) {
+		for(int i=0; i<arr.length; i++) {
 			int j = i-1;
-			while (j >=0 && arr[j + 1] < arr[j]) {
+			while(j >=0 && arr[j+1]< arr[j]) {
 				//swap
-				int temp = arr[j + 1];
-				arr[j + 1] = arr[j];
+				int temp = arr[j+1];
+				arr[j+1] = arr[j];
 				arr[j] = temp;
-				j = j - 1;				
+				j = j -1;
 			}
 		}
 		return arr;
+		
 	}
 
 }
