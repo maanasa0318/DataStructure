@@ -13,24 +13,20 @@ public class bucketSort {
 
 	private static int[] bucketSort(int[] arr) {
 
-		// we know we have three value input
-		int[] counts = {0, 0, 0};
-		
-		for(int num : arr) {
-			counts[num] += 1; 
+		int[] count = {0,0,0};
+		for(int nums : arr) {
+			count[nums] += 1;
 		}
-		
-		System.out.println(Arrays.toString(counts));
-		
-		// Fill each bucket in the original array
-	    int i = 0;
-	    for (int n = 0; n < counts.length; n++) {
-	        for (int j = 0; j < counts[n]; j++) {
-	            arr[i] = n;
-	            i++;
-	        }
-	    }
-	    return arr;
-	}
 
+		System.out.println(Arrays.toString(count));
+		
+		int i=0;
+		for(int j =0; j<count.length; j++) {
+			for(int k =0; k < count[j]; k++) {
+				arr[i] = j;
+				i++;
+			}
+		}
+		return arr;
+	}
 }
