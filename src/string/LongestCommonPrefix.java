@@ -14,6 +14,7 @@ public class LongestCommonPrefix {
 	private static String longestCommonPrefix(String[] strs) {
 		int index =0;
 		Arrays.sort(strs);
+		System.out.println(Arrays.toString(strs));
 		String str1 = strs[0];
 		String str2 = strs[strs.length-1];
 		

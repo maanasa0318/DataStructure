@@ -18,11 +18,106 @@ public class Test {
 		replaceElementsBruteForce(nums); 
 		
 		replaceElemnets(nums);
+		
+		String s = "abc", t = "ahbgdc";
+		System.out.println(isSubsequence(s, t));
+		
+		 //Length of Last Word
+		lenOfLastWord("Hello World");
+		
+		//Monotonic Array
+		int[] arr = {1,1,0};
+		System.out.println("array is monotonic " +isMonotonic(arr));
+		
 	}
 	
-	private static void replaceElemnets(int[] nums) {
-		// TODO Auto-generated method stub
+	
+
+	private static boolean isMonotonic(int[] arr) {
+		boolean increasingSeq = false;
+		boolean decreasingSeq = false;
+		int i=0;
+		if(arr[i] > arr[arr.length-1]) {
+			decreasingSeq = true;
+			return (checkMontonicForDecresingSequ(arr));
+
+		}else {
+			increasingSeq = true;
+			return(checkMontonicForIncreasingSequ(arr));
+		}
 		
+	}
+
+	private static boolean checkMontonicForIncreasingSequ(int[] arr) {
+		int i =0;
+		int j =1; 
+		while(j < arr.length) {
+			
+			if(i <= j && arr[i] <= arr[j] ) {
+				i++;
+				j++;
+			}
+			else {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+	private static boolean checkMontonicForDecresingSequ(int[] arr) {
+		int i =0;
+		int j =1; 
+			while(j < arr.length) {
+			
+			if (i <= j && arr[i] >= arr[j]) {
+				i++;
+				j++;
+			}
+			else {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+	private static void lenOfLastWord(String string) {
+
+		String[] str = string.trim().split(" ");
+		String s = str[str.length-1];
+		System.out.println(s.length());
+	}
+
+	private static boolean isSubsequence(String s, String t) {
+		int i=0;
+		int j=0;
+		while(i < s.length() && j < t.length()) {
+			if(s.charAt(i) == t.charAt(j)) {
+				i++;
+			}
+			j++;
+			
+		}
+		if (i == s.length()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	private static void replaceElemnets(int[] nums) {
+		int rightMax = -1;
+		// max = (oldmax,nums[i])
+		int newMax = 0;
+		
+		for(int i=nums.length - 1; i>=0; i--) {
+			newMax = Math.max(rightMax, nums[i]);
+			nums[i] = rightMax;
+			rightMax = newMax;
+		}
+		System.out.println(Arrays.toString(nums));
+
 	}
 
 	private static int[] replaceElementsBruteForce(int[] nums) {
