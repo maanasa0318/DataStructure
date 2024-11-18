@@ -10,9 +10,16 @@ public class SearchinRowwiseAndColumnwiseSortedArray {
 				       {32,33,39,50}
 				      };
 		int search = 29;
+		
+		int rows = arr.length;
+        int columns = arr[0].length; // Assuming all rows have the same length
+
+        System.out.println("Rows: " + rows);
+        System.out.println("Columns: " + columns);
+	        
 		int dimension= 4;
 		int index = findElement(arr, search, dimension);
-		System.out.println("index is at "+index);
+		//System.out.println("index is at "+index);
 	}
 
 	private static int findElement(int[][] arr, int search, int dimension) {

@@ -43,20 +43,21 @@ public class SearchInNearlySortedArray {
 			if(arr[mid] == search) {
 				return mid;
 			}
-			//mid  - 1 >= start means if mid is at 0 index so check index out of bound error 
-			if(mid -1 >= start && arr[mid-1] == search ) {
-				return mid-1;
-
+			
+			if(mid + 1 >= 0 && arr[mid + 1] == search) {
+				return mid + 1;
 			}
-			if(mid+1 <= end && arr[mid +1] == search) {
-				return mid+1;
+			
+			if(mid -1 <= arr.length -1 && arr[mid - 1] == search) {
+				return mid - 1;
 			}
-			else if(arr[mid] <= search) {
-				end = mid -2;
+			
+			if(arr[mid] > search) {
+				end = mid - 2;
+			}else {
+				start = mid +2;
 			}
-			else {
-				start = mid + 2;
-			}
+			
 		}
 		return 0;
 	}
