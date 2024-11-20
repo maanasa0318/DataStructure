@@ -18,17 +18,16 @@ public class TwoIntegerSum {
 	}
 
 	private static int[] onepass(int[] nums, int target) {
-		HashMap<Integer, Integer> hmap = new HashMap<>();
+		HashMap<Integer, Integer> map = new HashMap<>();
 		for(int i=0; i<nums.length; i++) {
-			int diff = target - nums[i];
+			int number = target - nums[i];
 			
-			if(hmap.containsKey(diff)) {
-				return new int [] {hmap.get(diff), i};
+			if(map.containsKey(number)){
+				return new int[] {map.get(number), i};
 			}
 			else {
-				hmap.put(nums[i], i);
+				map.put(nums[i], i);
 			}
-
 		}
 		return new int[] {};
 	}
