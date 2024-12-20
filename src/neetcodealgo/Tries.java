@@ -2,8 +2,6 @@ package neetcodealgo;
 
 import java.util.HashMap;
 
-import javax.swing.text.AsyncBoxView.ChildLocator;
-
 public class Tries {
 
 	class TrieNode{
