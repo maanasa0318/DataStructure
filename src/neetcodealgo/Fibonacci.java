@@ -14,6 +14,26 @@ public class Fibonacci {
 		System.out.println(res);
 		int res1 = dpfibbonacci(10);
 		System.out.println(res1);
+		//tabulation top down
+		int n = 5;
+		fibTabulation(n);
+		
+		
+	}
+
+
+	private static void fibTabulation(int n) {
+		int prev2 = 0;
+		int prev = 1;
+		int curr =0;
+		
+		for(int j=2; j<=n; j++) {
+			curr = prev + prev2;
+			prev2 = prev;
+			prev = curr;
+
+		}
+		System.out.println(prev);
 	}
 
 
