@@ -7,6 +7,7 @@ public class insertionSort {
 	public static void main(String[] args) {
 
 		int[] arr = {2, 3, 4, 1, 6};
+		int len = arr.length;
 		
 		int[] res = insertionSort(arr);
 		System.out.println(Arrays.toString(res));
