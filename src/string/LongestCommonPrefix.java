@@ -14,20 +14,19 @@ public class LongestCommonPrefix {
 	private static String longestCommonPrefix(String[] strs) {
 		int index =0;
 		Arrays.sort(strs);
-		System.out.println(Arrays.toString(strs));
-		String str1 = strs[0];
-		String str2 = strs[strs.length-1];
+		String s1 = strs[0];
+		String s2 = strs[strs.length-1];
 		
-		while(index < str1.length()) {
-			
-			if(str1.charAt(index) == str2.charAt(index)) {
-				index ++;
-			}else {
+		while(index < s1.length()) {
+			if(s1.charAt(index) == s2.charAt(index)) {
+				index++;
+			}
+			else {
 				break;
 			}
-			
 		}
-		return index==0?"":str1.substring(0, index);
+		
+		return index==0 ? "" : s1.substring(0,index);
 	}
 
 }
